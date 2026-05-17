@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>腱板断裂ARCR術後 看護リファレンス｜暫定版 v1.1</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Helvetica Neue',Arial,'Hiragino Kaku Gothic ProN','Hiragino Sans',Meiryo,sans-serif;color:#1a1a1a;background:#f7f6f2;font-size:13px;line-height:1.75}
+.wrap{max-width:880px;margin:0 auto;padding:1.4rem 1rem 4rem}
+.page-hdr{margin-bottom:1.2rem;padding-bottom:.9rem;border-bottom:2px solid #c8c6be}
+.page-hdr h1{font-size:19px;font-weight:700;letter-spacing:.02em;margin-bottom:3px}
+.page-hdr .meta{font-size:11.5px;color:#777;display:flex;flex-wrap:wrap;gap:10px}
+.page-hdr .ver{font-size:11px;font-weight:600;padding:2px 8px;border-radius:4px;background:#faeeda;color:#854f0b}
+
+/* TABS */
+.tabs{display:flex;flex-wrap:wrap;gap:5px;padding-bottom:10px;border-bottom:1px solid #ddd;margin-bottom:1.1rem}
+.tab{font-size:11px;padding:5px 11px;border-radius:6px;border:1px solid #ddd;cursor:pointer;background:#eeede8;color:#555;white-space:nowrap;transition:all .15s;font-weight:500}
+.tab.on{background:#fff;color:#1a1a1a;border-color:#999;font-weight:700;box-shadow:0 1px 3px rgba(0,0,0,.1)}
+.sec{display:none}.sec.on{display:block}
+
+/* HEADINGS */
+h3{font-size:14px;font-weight:700;margin:1.3rem 0 .55rem;padding-left:9px;border-left:3px solid #378add;color:#1a1a1a}
+h3:first-child{margin-top:0}
+h3.red{border-color:#e24b4a}
+h3.grn{border-color:#639922}
+h3.org{border-color:#ef9f27}
+h4{font-size:12.5px;font-weight:700;margin:.85rem 0 .35rem;color:#444}
+p,li{font-size:12.5px;line-height:1.8;color:#1a1a1a}
+ul,ol{padding-left:1.2rem}
+li{margin-bottom:3px}
+
+/* CARDS */
+.card{background:#fff;border:1px solid #e0dfd8;border-radius:10px;padding:.9rem 1.05rem;margin-bottom:.65rem}
+.card-title{display:flex;align-items:center;gap:8px;margin-bottom:.5rem;flex-wrap:wrap}
+.g2{display:grid;grid-template-columns:repeat(auto-fit,minmax(265px,1fr));gap:.65rem}
+.g3{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:.55rem}
+
+/* BADGES */
+.bd{font-size:10.5px;font-weight:700;padding:2px 9px;border-radius:5px;flex-shrink:0;white-space:nowrap}
+.bi{background:#e6f1fb;color:#185fa5}
+.bw{background:#faeeda;color:#854f0b}
+.bd2{background:#fcebeb;color:#a32d2d}
+.bg{background:#eaf3de;color:#3b6d11}
+.bn{background:#eeede8;color:#5f5e5a}
+.bp{background:#f0e8f8;color:#6b24a8}
+
+/* ALERTS */
+.al{border-left:3px solid;padding:.6rem .85rem;margin:.65rem 0;font-size:12.5px;line-height:1.7;border-radius:0 6px 6px 0}
+.al-d{border-color:#e24b4a;background:#fdf1f1;color:#7a1f1f}
+.al-w{border-color:#ef9f27;background:#fdf5e6;color:#6b3d00}
+.al-i{border-color:#378add;background:#eaf3fd;color:#0d3a6e}
+.al-g{border-color:#639922;background:#edf5e1;color:#2a4d0a}
+.al-p{border-color:#9b4dd4;background:#f7f0fe;color:#4a1870}
+
+/* TABLES */
+.tbl{width:100%;border-collapse:collapse;font-size:12px;margin:.5rem 0}
+.tbl th{background:#f2f1ec;font-weight:700;text-align:left;padding:6px 9px;border:1px solid #ddd}
+.tbl td{padding:6px 9px;border:1px solid #ddd;vertical-align:top;line-height:1.7}
+.tbl tr:nth-child(even) td{background:#fafaf7}
+.tbl-sm{font-size:11.5px}
+
+/* MBOX */
+.mbox{background:#f2f1ec;border-radius:7px;padding:.6rem .85rem;margin:.5rem 0;font-size:12.5px;line-height:1.8;border-left:2px solid #bbb}
+
+/* TAGS */
+.tk{display:inline-block;font-size:10.5px;padding:2px 7px;border-radius:4px;font-weight:700;margin-right:3px;flex-shrink:0;white-space:nowrap}
+.tk-r{background:#fcebeb;color:#a32d2d}
+.tk-g{background:#eaf3de;color:#3b6d11}
+.tk-b{background:#e6f1fb;color:#185fa5}
+.tk-y{background:#faeeda;color:#854f0b}
+.tk-n{background:#eeede8;color:#5f5e5a}
+.tk-p{background:#f0e8f8;color:#6b24a8}
+
+/* STEPS */
+.step{display:flex;gap:9px;margin-bottom:7px;align-items:flex-start}
+.sn{min-width:22px;height:22px;border-radius:50%;background:#e6f1fb;color:#185fa5;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0;margin-top:2px}
+.sn-r{background:#fcebeb;color:#a32d2d}
+.sn-g{background:#eaf3de;color:#3b6d11}
+.step p{font-size:12.5px;line-height:1.75}
+
+/* NERVE ROWS */
+.nerve-row{display:flex;gap:8px;align-items:flex-start;margin-bottom:7px;padding-bottom:7px;border-bottom:1px solid #f0efe8}
+.nerve-row:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.nerve-label{min-width:100px;font-size:10.5px;font-weight:700;padding:4px 6px;border-radius:4px;background:#faeeda;color:#854f0b;flex-shrink:0;text-align:center;line-height:1.5}
+.nerve-body{font-size:12px;line-height:1.75}
+
+/* SKIN GRID */
+.skin-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:.5rem;margin:.6rem 0}
+.skin-card{border:1px solid #e0dfd8;border-radius:8px;padding:.65rem .75rem;background:#fff}
+.skin-card .part{font-size:11px;font-weight:700;margin-bottom:.35rem;padding:2px 7px;border-radius:4px;display:inline-block;background:#faeeda;color:#854f0b}
+.skin-card li{font-size:11.5px;margin-bottom:2px}
+
+/* COMPARE */
+.compare-wrap{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;margin:.65rem 0}
+@media(max-width:560px){.compare-wrap{grid-template-columns:1fr}}
+.cmp{border:1px solid #e0dfd8;border-radius:10px;padding:.85rem 1rem}
+.cmp-hd{font-size:12.5px;font-weight:700;margin-bottom:.5rem;padding-bottom:.4rem;border-bottom:1px solid #e0dfd8}
+
+/* PHASE BAR */
+.ph-bar{display:flex;border-radius:8px;overflow:hidden;border:1px solid #ddd;margin:.65rem 0}
+.ph{flex:1;padding:7px 4px;text-align:center;font-size:10.5px;font-weight:700;line-height:1.4}
+.ph-a{background:#e6f1fb;color:#185fa5}
+.ph-b{background:#eaf3de;color:#3b6d11}
+.ph-c{background:#faeeda;color:#854f0b}
+.ph-d{background:#f0efe8;color:#5f5e5a}
+
+/* DAY BLOCKS */
+.day{border:1px solid #e0dfd8;border-radius:8px;margin-bottom:.5rem;overflow:hidden}
+.dh{background:#f2f1ec;padding:5px 11px;font-size:12px;font-weight:700;display:flex;align-items:center;gap:7px}
+.db{padding:7px 11px}
+.db ul{padding-left:1rem}
+.db li{font-size:12px;margin-bottom:3px}
+
+/* CHECK ITEMS */
+.check-item{display:flex;gap:8px;margin-bottom:5px;align-items:flex-start}
+.ck{min-width:15px;height:15px;border-radius:3px;border:1.5px solid #aaa;flex-shrink:0;margin-top:3px}
+.check-item p{font-size:12px;line-height:1.7}
+
+/* NRS BAR */
+.nrs{display:flex;gap:2px;margin:.45rem 0}
+.nc{flex:1;height:26px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;border-radius:3px}
+
+/* DIVIDER */
+.divider{border:none;border-top:1px solid #e0dfd8;margin:.9rem 0}
+
+/* POSITION BLOCK */
+.pos-blk{border:1px solid #e0dfd8;border-radius:10px;padding:.8rem 1rem;margin-bottom:.6rem}
+.pos-hd{font-size:13px;font-weight:700;margin-bottom:.4rem;display:flex;align-items:center;gap:7px;flex-wrap:wrap}
+
+/* ROOM RULE TABLE */
+.rule-ok{color:#2a4d0a;font-size:11.5px}
+.rule-ng{color:#7a1f1f;font-size:11.5px}
+.rule-q{color:#6b3d00;font-size:11.5px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="page-hdr">
+  <h1>腱板断裂（ARCR）術後 看護リファレンス</h1>
+  <div class="meta">
+    <span class="ver">暫定版 v1.1</span>
+    <span>整形外科病棟（施設プロトコルに従うこと）</span>
+    <span>作成：2025年</span>
+    <span>※主治医指示・施設プロトコルを最優先とすること</span>
+  </div>
+</div>
+
+<div class="tabs" id="tabs">
+  <button class="tab on" data-t="op">① 手術概要</button>
+  <button class="tab" data-t="zero">② ゼロポジション</button>
+  <button class="tab" data-t="brace">③ 装具管理</button>
+  <button class="tab" data-t="fit">④ 装着・手順</button>
+  <button class="tab" data-t="sched">⑤ 術後スケジュール</button>
+  <button class="tab" data-t="pain">⑥ 疼痛管理</button>
+  <button class="tab" data-t="pos">⑦ ポジショニング</button>
+  <button class="tab" data-t="nerve">⑧ 神経・皮膚障害</button>
+  <button class="tab" data-t="hand">⑨ 患側手の使用範囲</button>
+  <button class="tab" data-t="ward">⑩ 入院中の看護</button>
+  <button class="tab" data-t="danger">⑪ 禁忌動作</button>
+  <button class="tab" data-t="dc">⑫ 退院指導</button>
+</div>
+
+<!-- ① 手術概要 -->
+<div id="op" class="sec on">
+<h3>ARCRとは</h3>
+<div class="mbox">
+  <b>ARCR（Arthroscopic Rotator Cuff Repair：関節鏡視下腱板修復術）</b>は、断裂した腱板（主に棘上筋腱・棘下筋腱・肩甲下筋腱）をスーチャーアンカーを用いて上腕骨付着部に縫合・修復する手術。関節鏡を使用するため侵襲が小さく、ポータル（刺入孔）は通常3〜4か所程度。腱板は自然修復しないため手術が根本治療となる。
+</div>
+
+<h3>腱板の解剖と断裂の意味</h3>
+<div class="g2">
+  <div class="card">
+    <div class="card-title"><span class="bd bi">腱板を構成する4筋腱</span></div>
+    <ul>
+      <li><b>棘上筋腱</b>：最も断裂頻度が高い。肩甲骨棘上窩→大結節上部。腕の挙上担当。</li>
+      <li><b>棘下筋腱</b>：後方。外旋担当。大断裂では棘上筋腱と同時に断裂することが多い。</li>
+      <li><b>小円筋腱</b>：後下方。外旋補助。</li>
+      <li><b>肩甲下筋腱</b>：前方。内旋担当。</li>
+    </ul>
+  </div>
+  <div class="card">
+    <div class="card-title"><span class="bd bw">断裂サイズと術式選択</span></div>
+    <ul>
+      <li><b>小断裂（〜1cm）</b>：通常ARCR。ウルトラスイング使用。</li>
+      <li><b>中断裂（1〜3cm）</b>：通常ARCR。ウルトラスイング使用。</li>
+      <li><b>大断裂（3〜5cm）</b>：ARCR＋大腿筋膜移植も検討。アドバン使用。</li>
+      <li><b>広範囲断裂（5cm〜）</b>：部分修復・筋膜移植・RSA（リバース型人工肩関節）も選択肢。アドバン使用。</li>
+    </ul>
+  </div>
+</div>
+
+<h3>看護師が知っておくべき術中・術後の特性</h3>
+<div class="card">
+  <ul>
+    <li><b>全身麻酔＋腕神経叢ブロック</b>で行われることが多い。術後6〜24時間は患側上肢の感覚・運動が低下する（ブロック効果）。感覚がなくても患肢を動かさないよう説明することが重要。</li>
+    <li><b>ポータル（刺入孔）は3〜4か所</b>のため創部は小さいが、関節内での操作は広範囲にわたる。</li>
+    <li><b>修復部の強度は術後6週間が最も低い</b>。術後3ヶ月にわたってリモデリングが続き、再断裂リスクが高い期間が長い。</li>
+    <li><b>大断裂・広範囲断裂</b>では腱板が収縮・萎縮しており、引き寄せた状態で縫合するため修復部テンションが高く、より厳格な管理が必要。</li>
+    <li><b>大腿筋膜移植</b>が追加された場合は大腿部にも創部があり、術後管理が複雑になる。</li>
+  </ul>
+</div>
+
+<h3>組織治癒の4フェーズ（全期間を通じた看護の基盤）</h3>
+<div class="ph-bar">
+  <div class="ph ph-a">炎症期<br>術後0〜7日<br><span style="font-size:9px;font-weight:400">強度：最低</span></div>
+  <div class="ph ph-b">増殖期<br>術後1〜6週<br><span style="font-size:9px;font-weight:400">コラーゲン合成開始</span></div>
+  <div class="ph ph-c">リモデリング期<br>術後6週〜3ヶ月<br><span style="font-size:9px;font-weight:400">再断裂リスク最高</span></div>
+  <div class="ph ph-d">成熟期<br>術後3ヶ月〜1年<br><span style="font-size:9px;font-weight:400">コラーゲン再構築</span></div>
+</div>
+<div class="al al-w">炎症期は修復部の機械的強度が最も低い。増殖期に入りコラーゲンが形成され始めるが、依然として脆弱。リモデリング期は装具が外れ患者の行動自由度が上がる一方で生物学的強度との乖離が最大になる「最も危険な時期」。この認識を全スタッフで共有する。</div>
+</div>
+
+<!-- ② ゼロポジション -->
+<div id="zero" class="sec">
+<h3>ゼロポジション（Zero Position）とは</h3>
+<div class="mbox">
+  <b>肩甲棘の延長線と上腕骨の長軸が一直線に揃う肢位。</b>外転約60〜70°＋屈曲（前方挙上）約20〜30°の組み合わせ。腕を真横でも真前でもなく「斜め前方に持ち上げた方向」がこれにあたる。この角度において腱板修復部への張力が解剖学的に最も小さくなる。装具（ウルトラスイング・アドバン）はこの肢位を機械的に維持するために設計されている。
+</div>
+
+<h3>なぜこの角度で張力が最小になるか</h3>
+<div class="card">
+  <ul>
+    <li><b>腱の走行と牽引方向の一致</b>：棘上筋腱は肩甲骨棘上窩から大結節上面に向かって走行する。ゼロポジション方向に腕を動かすと走行と引っ張り方向が一直線になり、腱に「ねじれ」「引き伸ばし」ストレスが生じない。</li>
+    <li><b>腱の弛緩化</b>：腕が下垂（外転0°）では棘上筋腱が肩峰と上腕骨頭に挟まれやすく牽引が増す。外転60〜70°ではこのインピンジメントが解除され腱が弛緩方向になる。</li>
+    <li><b>三角筋の補助</b>：この角度では三角筋のモーメントが修復部への過大な張力を代償する方向に働く。腱板単独で上腕骨を支える必要が減る。</li>
+    <li><b>棘下筋・小円筋も同様</b>：いずれも肩甲骨から大結節後面への走行であり、ゼロポジションでは走行方向への負荷となり修復部ストレスが最小化される。</li>
+  </ul>
+</div>
+
+<h3>外転角度による修復部テンションの変化</h3>
+<table class="tbl">
+  <thead><tr><th>肢位</th><th>外転角度</th><th>修復部テンション</th><th>臨床的意味</th></tr></thead>
+  <tbody>
+    <tr><td>完全下垂位（腕が垂れる）</td><td>0°</td><td style="color:#a32d2d;font-weight:700">最大・最危険</td><td>クッションなし仰臥位・装具除去直後がこの状態。夜間痛の主原因。</td></tr>
+    <tr><td>軽度外転（三角巾相当）</td><td>約30°</td><td style="color:#854f0b;font-weight:700">高め</td><td>三角巾単独では腱板術後の修復部保護として不十分。</td></tr>
+    <tr><td>ゼロポジション</td><td>約60〜70°</td><td style="color:#3b6d11;font-weight:700">最小・最安全</td><td>外転装具が維持する角度。修復部保護として最適。</td></tr>
+    <tr><td>過剰外転</td><td>90°以上</td><td style="color:#854f0b;font-weight:700">再び増加</td><td>逆に腱板が伸張される。リハビリ時に外転させすぎない。</td></tr>
+  </tbody>
+</table>
+<div class="al al-d">外転「0°（腕がぶら下がる）」が最も危険。装具を外した清拭・リハビリ・睡眠中に患肢を放すと一瞬でこの状態になる。「外すときは必ず健側で支える」を全スタッフが徹底する。</div>
+
+<h3>ゼロポジションが崩れる典型場面と対策</h3>
+<table class="tbl">
+  <thead><tr><th>場面</th><th>崩れ方</th><th>対策</th></tr></thead>
+  <tbody>
+    <tr><td>睡眠中（仰臥位）</td><td>無意識に腕が後方・体側に落下し外転0°近くになる</td><td>腋窩〜肘下にクッション。ギャッジアップ15〜30°でテンション軽減。</td></tr>
+    <tr><td>体幹ベルトのゆるみ</td><td>外転枕が下がり腕が垂れる</td><td>定時にベルト締め付け確認。ゆるみを見つけたら即調整。</td></tr>
+    <tr><td>前傾座位（食事・スマホ操作）</td><td>体幹が前傾すると装具内で腕が後下方にずれる</td><td>背もたれを使った直立座位を促す。肘掛け椅子を活用。</td></tr>
+    <tr><td>装具を外した清拭時</td><td>介助者が患肢を放した瞬間に下垂する</td><td>外す前に健側で支えるか、看護師が腋窩〜前腕を保持してから外す。</td></tr>
+    <tr><td>立位・歩行中の疲労</td><td>長時間歩行で肩が前方に落ちてくる</td><td>定期的に肩位置を確認。外転枕が下がっていないかチェック。</td></tr>
+  </tbody>
+</table>
+
+<h3>ゼロポジション確認チェック</h3>
+<div class="card">
+  <div class="check-item"><div class="ck"></div><p>患側の肩と健側の肩の高さが揃っているか（患側が下がっていないか）</p></div>
+  <div class="check-item"><div class="ck"></div><p>患側の肘が肩のラインより前方に出ているか（体側・後方に落ちていないか）</p></div>
+  <div class="check-item"><div class="ck"></div><p>腋窩が自然に開いているか（腕が体幹に密着していないか）</p></div>
+  <div class="check-item"><div class="ck"></div><p>患側の手が腹部の前方〜やや外方に位置しているか</p></div>
+  <div class="check-item"><div class="ck"></div><p>体幹ベルトにたるみはないか（たるみで外転枕が下がる）</p></div>
+  <div class="check-item"><div class="ck"></div><p>前傾姿勢になっていないか（座位・立位時）</p></div>
+</div>
+</div>
+
+<!-- ③ 装具管理 -->
+<div id="brace" class="sec">
+<h3>外転装具の本質的な役割</h3>
+<div class="mbox">
+  外転装具の役割は「<b>ゼロポジションを患者が意識しなくても24時間維持し続けること</b>」に尽きる。人間が自力でこの肢位を睡眠中も含め6〜8週間維持することは不可能なため、装具という機械的手段で担保する。装具を外す行為そのものがリスクであり、「外す時間を最小化する」が装具管理の核心。
+</div>
+
+<h3>ウルトラスイング vs アドバン（MP肩装具システム 腋下型）</h3>
+<div class="compare-wrap">
+  <div class="cmp">
+    <div class="cmp-hd" style="color:#185fa5">ウルトラスイング<br><span style="font-size:11px;font-weight:400;color:#666">小〜中断裂に使用</span></div>
+    <ul>
+      <li><b>構造</b>：柔らかい外転枕クッション＋アームスリング（袋状）＋体幹固定ベルトの3点構成。フレームなし・ソフト素材。</li>
+      <li><b>外転角度</b>：約30〜45°</li>
+      <li><b>肘関節</b>：スリング内で肘屈曲約90°。固定されているが袋の中で若干動く。</li>
+      <li><b>適応</b>：小断裂・中断裂のARCR標準術式</li>
+      <li><b>重量・装着感</b>：比較的軽量。装着感は「腕が吊られている」程度。</li>
+      <li><b>皮膚負担</b>：腋窩パッドが小さく蒸れは中等度。</li>
+      <li><b>除去の流れ</b>：①術後6週：クッション除去 → ②術後7週：スリング除去</li>
+      <li><b>患者の苦痛レベル</b>：不自由ではあるが、アドバンに比べると軽度〜中等度</li>
+    </ul>
+  </div>
+  <div class="cmp" style="border-color:#ef9f27;border-width:1.5px">
+    <div class="cmp-hd" style="color:#854f0b">アドバン（MP肩装具システム 腋下型）<br><span style="font-size:11px;font-weight:400;color:#666">大・広範囲断裂に使用</span></div>
+    <ul>
+      <li><b>構造</b>：<b style="color:#a32d2d">硬性フレーム（金属・カーボン製アーム）＋体幹ベスト（ネオプレンパッド）</b>。腋窩パッドが脇を大きく押し上げ、フレームで外転角度を強制保持する。</li>
+      <li><b>外転角度</b>：約45〜60°（ゼロポジションに近い角度を維持）</li>
+      <li><b>肘関節</b>：<b style="color:#a32d2d">肘関節部に可動調整機構（ダイヤル・ロック式）あり。</b>初期は肘ロック状態で固定。医師判断で段階的にフリーにする（詳細後述）。</li>
+      <li><b>適応</b>：大断裂・広範囲断裂・大腿筋膜移植例</li>
+      <li><b>重量・装着感</b>：重く、体幹全体を覆うため非常に窮屈。「鎧を着ているよう」と表現する患者もいる。</li>
+      <li><b>皮膚負担</b>：腋窩・胸部・背部への圧迫が強く、蒸れ・擦過傷の頻度が高い。</li>
+      <li><b>除去の流れ</b>：①肘フリー化（2〜4週目・医師判断）→ ②クッション除去（6〜8週）→ ③完全除去（8〜10週）</li>
+      <li><b>患者の苦痛レベル</b>：<b style="color:#a32d2d">ウルトラスイングに比べて著しく高い</b></li>
+    </ul>
+  </div>
+</div>
+
+<h3 class="org">アドバンが引き起こす苦痛の実態</h3>
+<div class="al al-w">アドバンは「大断裂を守るために必要な装具」だが、患者が経験する苦痛はウルトラとは次元が異なる。「苦しいのは当然です。おかしくはありません」と明示的に伝え、苦痛への積極的な対応を行う。</div>
+<table class="tbl">
+  <thead><tr><th>苦痛の種類</th><th>ウルトラスイング</th><th>アドバン（腋下型）</th></tr></thead>
+  <tbody>
+    <tr><td>重さ・拘束感</td><td>軽量。体幹の動きはある程度自由。</td><td>フレーム重量＋体幹ベストで全体的に重く動きが大きく制限。</td></tr>
+    <tr><td>腋窩・胸部の圧迫</td><td>腋窩枕が当たる程度。比較的軽度。</td><td>腋窩パッドが脇を強く押し上げる。胸部の締め付けで深呼吸しにくい場合あり。</td></tr>
+    <tr><td>熱さ・蒸れ</td><td>中等度。夏季は不快。</td><td>体幹全体を覆うネオプレンで季節を問わず高温多湿。発汗が著明。</td></tr>
+    <tr><td>睡眠への影響</td><td>不快だが比較的慣れやすい。</td><td>フレームの硬さと重さで体位変換が非常に困難。夜間痛・不眠が強い傾向。</td></tr>
+    <tr><td>外見・社会的苦痛</td><td>目立つが比較的コンパクト。</td><td>フレームが外側に大きく張り出し非常に目立つ。外出時の周囲の視線が負担。</td></tr>
+    <tr><td>着脱の困難さ</td><td>慣れれば患者・家族でも対応可。</td><td>フレーム構造が複雑で専門的な知識が必要。装具士・外来の確認が必要。</td></tr>
+  </tbody>
+</table>
+
+<h3 class="org">アドバンの肘関節：段階的フリー化のプロセス</h3>
+<div class="mbox">アドバン（MP肩装具システム 腋下型）は<b>肘関節部に可動調整機構（ダイヤル式ロック）を備える</b>。肩関節外転位をフレームで保持したまま、肘関節の屈伸自由度を段階的に解放できる。これはウルトラスイングにはない機能。</div>
+<table class="tbl">
+  <thead><tr><th>フェーズ</th><th>肘関節の状態</th><th>目安時期</th><th>看護・患者への説明</th></tr></thead>
+  <tbody>
+    <tr><td><b>Phase 1：肘固定期</b></td><td>肘ロック状態。肘の屈伸は不可。フレームに固定されており動かそうとしても動かない。</td><td>術後〜医師判断まで（目安：術後2〜4週）</td><td>「肘も固定されているのは正常」と説明。焦らないよう伝える。手指・手関節の運動は可能。</td></tr>
+    <tr><td><b>Phase 2：肘フリー化開始</b></td><td>医師指示でダイヤルを解放 → 肘の自動屈伸が可能になる。<b>肩関節はまだ外転位に固定されたまま。</b></td><td>医師判断による（断裂サイズ・修復状態による）</td><td>「肘が動くようになりましたが、肩はまだ固定中」と明確に伝える。「肘が動く＝治った」という誤解を防ぐ。禁忌動作は継続。</td></tr>
+    <tr><td><b>Phase 3：完全除去</b></td><td>医師指示で装具全体を除去。</td><td>術後6〜10週（医師判断）</td><td>除去後も禁忌動作は術後3ヶ月まで継続。「装具が取れた＝何でもOK」ではないことを繰り返し説明。</td></tr>
+  </tbody>
+</table>
+<div class="al al-d">肘フリー化は「肩の修復が終わった」サインではなく、主に「肘の廃用・拘縮予防」のために行われる。フリー化当日に患側腕全体を使い始める患者が多い。フリー化した日に必ず「肩は引き続き固定中・禁忌動作は変わらない」と再指導する。</div>
+
+<h3>就寝時：肘下クッション設置（両装具共通・必須）</h3>
+<div class="al al-w">両装具とも就寝中に<b>腕が後方に引かれる「後方落下」</b>が生じやすく、これが夜間痛の直接原因になる。どちらの装具でも就寝前の肘下クッション設置が必須。</div>
+<div class="g2">
+  <div class="card">
+    <div class="card-title"><span class="bd bi">後方落下とは</span></div>
+    <p>仰臥位では重力と睡眠中の筋弛緩により腕が後方（背中方向）に引かれる。外転位に保持された腕全体の重量が後方に落ちることで、肩関節が後方内旋・伸展方向に動かされ、修復した棘上筋・棘下筋腱に後方からの牽引ストレスが加わる。これが夜間痛の主要原因のひとつ。</p>
+  </div>
+  <div class="card">
+    <div class="card-title"><span class="bd bg">対策：肘下クッション</span></div>
+    <ul>
+      <li>腋窩〜<b>肘の下</b>にバスタオル（丸めたもの）またはポジショニングクッションを挿入</li>
+      <li>肘が後方に沈み込まない高さに調整（肘が肩と同じ高さか、わずかに前方・上方が目安）</li>
+      <li>ベッドを15〜30°ギャッジアップすると後方落下がさらに軽減する</li>
+      <li><b>アドバン装着時の特別な注意</b>：フレームの重量で後方落下の力が大きいため、長枕（抱き枕）が有効。クッションがフレームの下に入り込んでずれやすい。深夜巡視で位置を必ず確認する。</li>
+    </ul>
+  </div>
+</div>
+<div class="al al-d">消灯前の巡視でクッションの位置確認を日課にする。ずれていれば患者を起こさず静かに修正する。「肘下クッションなし」で眠ることは、装具装着中であっても修復部へのストレスになる。</div>
+
+<h3>装具別：除去・フリー化タイムライン（一般的な目安）</h3>
+<table class="tbl">
+  <thead><tr><th>時期</th><th>ウルトラスイング（小中断裂）</th><th>アドバン腋下型（大・広範囲断裂）</th></tr></thead>
+  <tbody>
+    <tr><td>術後〜2〜4週</td><td>終日装着（清拭・リハ時のみ除去）</td><td>終日装着。<b>肘関節ロック状態。</b></td></tr>
+    <tr><td>術後2〜4週（医師判断）</td><td>—</td><td><b>肘関節フリー化（ダイヤル解放）。</b>肩は外転位固定継続。フリー化当日に再指導。</td></tr>
+    <tr><td>術後6週</td><td>外転枕クッション除去。スリング継続。</td><td>装具継続（大断裂は6週でも腱板強度不十分）</td></tr>
+    <tr><td>術後7〜8週</td><td>スリング除去。装具完全除去。</td><td>クッション除去。スリング継続。</td></tr>
+    <tr><td>術後8〜10週</td><td>完全除去後。禁忌動作のみ注意。</td><td>スリング除去。完全除去。</td></tr>
+    <tr><td colspan="3" style="color:#777;font-size:11px">※除去・フリー化タイミングはすべて主治医指示による。上記はあくまでも目安。</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- ④ 装着ポイント・手順 -->
+<div id="fit" class="sec">
+<h3>装着の3原則</h3>
+<div class="al al-g">この3点が守れていればゼロポジションは概ね保たれている。いずれかが崩れていれば修復部にストレスがかかっている。</div>
+<div class="card">
+  <div class="step"><div class="sn sn-g">1</div><p><b>力を抜く（脱力してから固定する）</b><br>肩に力が入ったまま固定すると筋緊張で肩が引き上がった状態で固定され、ゼロポジションがずれる。「ストンと力を抜いて」と声かけしてから装具を当てる。装着後も「力が入っていませんか」と確認する。</p></div>
+  <div class="step"><div class="sn sn-g">2</div><p><b>肩の高さを左右揃える</b><br>患側の肩が健側より低い（落ちた）状態で固定すると、修復部に下垂牽引のテンションがかかり続ける。装着前に看護師が目視で左右差を確認し、高さが揃ったことを確認してからベルトを締める。</p></div>
+  <div class="step"><div class="sn sn-g">3</div><p><b>肘を肩より前に出す</b><br>肘が体幹の真横または後方に位置すると腕が内旋・内転方向に引かれ修復部ストレスが増加する。外転枕上で肘が肩のラインより前方に位置していることを確認する。「肘を少し前に」の声かけだけで改善することが多い。</p></div>
+</div>
+
+<h3>装着の具体的な手順（ウルトラスイングを例に）</h3>
+<div class="card">
+  <div class="step"><div class="sn">1</div><p>患者に座位または立位をとってもらい、体幹を伸ばし肩の力を抜いた状態にする。</p></div>
+  <div class="step"><div class="sn">2</div><p>外転枕クッションを患側腋窩に当てる。皮膚が直接当たる場合は薄手のガーゼを介在させる。</p></div>
+  <div class="step"><div class="sn">3</div><p>アームスリングに前腕〜手を入れる。肘を約90°に屈曲した状態でスリングが前腕をしっかり包んでいることを確認。</p></div>
+  <div class="step"><div class="sn">4</div><p>体幹ベルトを胸部〜腰部に巻く。締め付けは「指2本が入る程度」。きつすぎると神経圧迫、ゆるすぎると外転枕がずれる。</p></div>
+  <div class="step"><div class="sn">5</div><p>3原則（脱力・左右高さ・肘位置）を最終確認。患者にも「ずれていたら教えてください」と伝える。</p></div>
+</div>
+
+<h3>除去の手順（清拭・リハビリ前）</h3>
+<div class="card">
+  <div class="step"><div class="sn">1</div><p>「今から外します、腕をそのままにしていてください」と声かけ。</p></div>
+  <div class="step"><div class="sn">2</div><p><b>健側の手で患側前腕を下から支えた状態で</b>ベルト・スリングを外す。看護師が腋窩〜前腕を保持しながら外す。患肢を放した瞬間が最も危険。</p></div>
+  <div class="step"><div class="sn">3</div><p>清拭・リハビリ中も患肢を「宙に浮いた状態」にしない。清拭時はベッドや膝の上に患肢を乗せて支持する。</p></div>
+  <div class="step"><div class="sn">4</div><p>再装着は上記の手順で実施。自己装着している患者でも定期的にスタッフが確認する。</p></div>
+</div>
+<div class="al al-d">「少しくらいなら外しても大丈夫」と自己判断で外すケースが多い。「装具を外した瞬間に腕が垂れると縫合部に瞬間的な引っ張りが生じる」と具体的に説明し、自己解除を防ぐ。</div>
+
+<h3>ベルト締め付けの確認基準</h3>
+<table class="tbl">
+  <thead><tr><th>状態</th><th>問題点</th><th>対処</th></tr></thead>
+  <tbody>
+    <tr><td>きつすぎる（指1本も入らない）</td><td>腋窩神経・橈骨神経圧迫のリスク。胸郭圧迫で呼吸苦。皮膚の圧迫壊死。</td><td>即刻1〜2穴ゆるめる。末梢循環・しびれを再確認。</td></tr>
+    <tr><td><b>適正（指2本がちょうど入る）</b></td><td>—</td><td>この状態を患者・家族に実感させ基準として覚えさせる。</td></tr>
+    <tr><td>ゆるすぎる（指3〜4本以上入る）</td><td>外転枕がずれ外転角度が低下。ゼロポジション喪失。腱板への張力増加。</td><td>締め直し。自分でずれに気づいたら看護師に伝えるよう指導。</td></tr>
+  </tbody>
+</table>
+
+<h3>退院前セルフチェック指導</h3>
+<div class="card">
+  <div class="check-item"><div class="ck"></div><p>鏡で左右の肩の高さが揃っているか毎朝確認する</p></div>
+  <div class="check-item"><div class="ck"></div><p>体幹ベルトに「指2本のゆとり」があるか確認する</p></div>
+  <div class="check-item"><div class="ck"></div><p>腋窩・肘内側にジリジリしたしびれや強い痛みがないか確認する</p></div>
+  <div class="check-item"><div class="ck"></div><p>皮膚の赤みや擦れた感じがある場合はガーゼを当てて外来に連絡する</p></div>
+  <div class="check-item"><div class="ck"></div><p>装具がずれたと感じたら自己で直さず家族や外来に相談する</p></div>
+  <div class="check-item"><div class="ck"></div><p>就寝前に肘下クッションの位置を確認する</p></div>
+</div>
+</div>
+
+<!-- ⑤ 術後スケジュール -->
+<div id="sched" class="sec">
+<h3>POD0（手術当日）：時間帯別看護タスク</h3>
+<div class="day">
+  <div class="dh"><span class="tk tk-b">帰室直後〜2時間</span>バイタル15〜30分毎</div>
+  <div class="db"><ul>
+    <li>装具の位置・締め付け・皮膚圧迫の有無を最初に確認。</li>
+    <li>バイタル（SpO₂・BP・HR・呼吸数）：斜角筋間ブロック後は横隔膜神経遮断によるSpO₂低下に注意（目標≥95%）。</li>
+    <li>患側上肢の末梢循環：橈骨動脈触知・爪床CRT（2秒以内）・皮膚色・温度を健側と比較。</li>
+    <li>ブロック効果確認：「感覚がありますか？手は動きますか？」。完全遮断中はNRS0〜2でよい。</li>
+    <li>全身麻酔後の悪心・嘔吐：制吐剤の処方確認。嘔吐時に患側に荷重がかからないよう配慮。</li>
+    <li>出血・ドレーン：帰室直後の排液量・色を記録。鮮血急増 → 即報告。</li>
+  </ul></div>
+</div>
+<div class="day">
+  <div class="dh"><span class="tk tk-b">術後2〜6時間</span>ブロック残存中期</div>
+  <div class="db"><ul>
+    <li>疼痛評価を1時間毎。NRS 0〜2はブロック効果継続中として正常。</li>
+    <li>感覚がないため患者が患肢を動かしやすい時期。「感覚がなくても動かさない」と繰り返し説明。</li>
+    <li><b>経口鎮痛薬の内服開始確認</b>。ブロック消退前の先取り投与が重要（術後5〜6時間が目安）。</li>
+    <li>離床開始（施設プロトコルに従う）：ベッドアップ → 端座位 → 立位。初回は2名対応。</li>
+  </ul></div>
+</div>
+<div class="day">
+  <div class="dh"><span class="tk tk-y" style="color:#7a1f1f;background:#fcebeb">術後6〜18時間　★最も注意が必要な時間帯</span>ブロック消退期・リバウンド痛ピーク</div>
+  <div class="db"><ul>
+    <li>疼痛評価を1時間毎。NRSが急上昇する時間帯。<b>リバウンド痛（NRS 7〜10の激痛）</b>が生じることがある。</li>
+    <li>リバウンド痛発生時：まずポジショニング確認 → NRS≥5ならPRN鎮痛薬使用 → 30分後再評価。</li>
+    <li>患肢感覚の回復確認：「ちくちく感・しびれが出てきた」はブロック消退のサイン。時刻を記録。</li>
+    <li><b>当直帯への申し送りを確実に</b>：「ブロック消退中・現在NRS○・PRN使用○回・次の評価予定○時」</li>
+    <li>消灯前にポジショニングを確認。就寝前鎮痛薬の内服を確認。</li>
+  </ul></div>
+</div>
+
+<h3>POD1〜14：日別の主要観察・ケア内容</h3>
+<div class="day">
+  <div class="dh"><span class="tk tk-b">POD 1</span>術後1日目</div>
+  <div class="db"><ul>
+    <li>装具の最終調整（義肢装具士訪問が多い）。皮膚状態・圧迫部位の確認。</li>
+    <li>ブロック完全消退の確認。感覚・運動が健側と同等に戻っているか比較評価。</li>
+    <li>疼痛評価（安静時NRS・体動時NRS）：鎮痛薬の効果判定。</li>
+    <li>PT開始：肩甲帯マッサージ、手指グーパー（20回×2〜3セット）、肩甲骨運動、上半身の捻り運動。</li>
+    <li>離床・歩行の自立度確認。装具重量での転倒リスク評価。</li>
+    <li>更衣指導：患側から着る・健側から脱ぐ（脱健着患の逆）。前開きの服が楽と伝える。</li>
+  </ul></div>
+</div>
+<div class="day">
+  <div class="dh"><span class="tk tk-b">POD 2〜3</span>炎症ピーク期</div>
+  <div class="db"><ul>
+    <li>疼痛が最も強い時期。NSAIDs定期投与の継続・効果評価。PRN使用回数を記録。</li>
+    <li>創部：熱感・腫脹が最大になる時期。鮮血・膿性滲出がなければ正常範囲。</li>
+    <li>体温：37.5℃以下の微熱は術後炎症として正常。38℃以上・持続 → 感染疑い・医師報告。</li>
+    <li>上肢末梢の浮腫（前腕〜手背）が出ることがある。グーパー運動を促す。</li>
+    <li>排便管理：オピオイド使用例・活動量低下で便秘しやすい。緩下剤の処方確認。</li>
+  </ul></div>
+</div>
+<div class="day">
+  <div class="dh"><span class="tk tk-b">POD 4〜7</span>炎症後期・退院準備開始</div>
+  <div class="db"><ul>
+    <li>ドレーン抜去の検討（医師判断）。抜去後の創部変化を観察。</li>
+    <li>義肢製作所スタッフ来室（POD5〜7が多い）：装具費用・療養費払い申請の説明。</li>
+    <li>疼痛：定期内服で管理できているか確認。PRN使用回数が減少傾向にあるか評価。</li>
+    <li>退院前教育の開始：禁忌動作・睡眠体位・装具管理・患側手の使用範囲を説明。書面を用いて家族も同席。</li>
+  </ul></div>
+</div>
+<div class="day">
+  <div class="dh"><span class="tk tk-b">POD 7〜14</span>炎症終息期・退院判定期</div>
+  <div class="db"><ul>
+    <li>安静時疼痛は改善傾向。体動時・夜間に残存しやすい。</li>
+    <li>創部：縫合糸の吸収状況確認。抜糸時期は医師指示（通常POD10〜14）。</li>
+    <li>装具装着での日常動作の自立度を確認し退院可否を評価。</li>
+    <li>退院指導の完成：患者・家族が自力で装具着脱・体位管理・禁忌動作回避ができているか確認。</li>
+    <li>外来リハビリ予約・受診日確認。入院期間の目安：術後7〜14日（施設差あり）。</li>
+  </ul></div>
+</div>
+
+<h3>週別・断裂サイズ別 リハビリスケジュールと可動域目標</h3>
+<div class="al al-w">断裂サイズ・主治医指示によって開始時期が異なる。以下はあくまでも目安。ROM拡大・装具除去のタイミングはすべて主治医・PT指示を確認すること。</div>
+<table class="tbl tbl-sm">
+  <thead>
+    <tr><th>時期</th><th>装具</th><th>他動ROM目標</th><th>自動ROM目標</th><th>許可される日常動作</th><th>看護の観察重点</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>〜POD14（2週）</b></td>
+      <td>終日装着（小中・大断裂とも）</td>
+      <td>装具装着位のみ</td>
+      <td>手指グーパー・肘屈伸・肩甲骨運動・上体捻り</td>
+      <td>非患側のみで生活。患側手指の軽作業（医師確認のうえ）。</td>
+      <td>疼痛NRS・ブロック消退・末梢循環・創部・装具位置</td>
+    </tr>
+    <tr>
+      <td><b>術後3〜5週</b></td>
+      <td>終日装着（小中・大断裂とも）</td>
+      <td>挙上≦80〜100°（愛護的）<br>外旋≦10〜20°</td>
+      <td>振り子運動（愛護的）のみ追加</td>
+      <td>同上。スマホ・内服開封（テーブル置きで）は医師確認のうえ検討。</td>
+      <td>装具位置・皮膚トラブル・夜間痛のNRS</td>
+    </tr>
+    <tr>
+      <td><b>術後6週</b><br>（小中断裂）</td>
+      <td>クッション除去。スリングのみ。</td>
+      <td>挙上≦100〜130°<br>外旋≦30〜40°</td>
+      <td>自動介助運動開始。等尺性運動追加。</td>
+      <td>脇を開けない動作は許可。物を持つ・腕を挙げる・体を支えることは禁止。</td>
+      <td>自動運動開始後の疼痛反応・翌日NRS確認</td>
+    </tr>
+    <tr>
+      <td><b>術後7〜8週</b><br>（小中断裂）</td>
+      <td>スリング除去。完全除去。</td>
+      <td>全方向他動</td>
+      <td>挙上≦90〜120°<br>外旋≦20〜40°</td>
+      <td>装具除去後：1kg以下の物を平面でスライドさせる程度まで。頭上への持ち上げ禁止。</td>
+      <td>装具除去後の姿勢癖・再断裂の症状（急激な疼痛増強）</td>
+    </tr>
+    <tr>
+      <td><b>術後8〜10週</b><br>（大断裂：装具除去期）</td>
+      <td>大断裂：スリング除去・完全除去</td>
+      <td>全方向他動</td>
+      <td>自動ROM訓練開始</td>
+      <td>同上</td>
+      <td>同上</td>
+    </tr>
+    <tr>
+      <td><b>術後10〜12週</b></td>
+      <td>なし</td>
+      <td>全方向</td>
+      <td>挙上≦160〜180°目標</td>
+      <td>1kgおもり・ゴムバンドでの筋力訓練（PT指示）。500gまでの持ち運び。</td>
+      <td>疼痛なく可動域が拡大しているか（外来）</td>
+    </tr>
+    <tr>
+      <td><b>術後3ヶ月〜</b></td>
+      <td>なし</td>
+      <td>全方向</td>
+      <td>機能的可動域の獲得</td>
+      <td>2〜3kgまで（医師許可後）。重労働・スポーツは6ヶ月〜（個人差あり）。</td>
+      <td>再断裂の症状説明を再確認（外来）</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>再断裂を示すサイン</h3>
+<div class="g2">
+  <div class="card">
+    <div class="card-title"><span class="bd bg">正常な経過の目安</span></div>
+    <ul>
+      <li>術後2〜3日：疼痛・腫脹のピーク</li>
+      <li>1〜2週：安静時痛の改善</li>
+      <li>4〜6週：体動時痛が徐々に改善</li>
+      <li>3ヶ月：日常生活動作が概ね自立</li>
+      <li>4〜6ヶ月：筋力・可動域の実用レベル回復（個人差大）</li>
+    </ul>
+  </div>
+  <div class="card">
+    <div class="card-title"><span class="bd2">要注意サイン（再断裂疑い）</span></div>
+    <ul>
+      <li>回復していた挙上動作が<b>突然</b>できなくなった</li>
+      <li>いったん改善した疼痛が<b>急激に</b>再増強した</li>
+      <li>装具除去後に外転筋力が著明に消失した</li>
+      <li>「力が入らなくなった」が重要なサイン（痛みが増すとは限らない）</li>
+      <li>→ 即外来受診・連絡を指導</li>
+    </ul>
+  </div>
+</div>
+</div>
+
+<!-- ⑥ 疼痛管理 -->
+<div id="pain" class="sec">
+<h3>疼痛のメカニズム別分類</h3>
+<div class="g2">
+  <div class="card">
+    <div class="card-title"><span class="bd bw">侵害受容性疼痛</span><span style="font-size:11.5px">術後主体。NSAIDs有効。</span></div>
+    <ul>
+      <li><b>炎症性メディエーター</b>：手術操作でPGE₂・IL-6・TNF-αが放出。侵害受容器（Aδ・C線維）を感作。</li>
+      <li><b>修復部の機械的張力</b>：縫合部への牽引ストレスが圧受容器を刺激。体位・装具のズレで急増する。</li>
+      <li><b>筋スパズム悪循環</b>：疼痛 → 肩周囲筋の防御収縮 → 血流低下 → さらなる疼痛。</li>
+    </ul>
+  </div>
+  <div class="card">
+    <div class="card-title"><span class="bd bw">神経障害性疼痛（要鑑別）</span></div>
+    <ul>
+      <li><b>ブロック消退後リバウンド痛</b>：局所麻酔薬消退時に抑制されていた侵害受容器が一斉に脱抑制。NRS 7〜10の激痛が出ることがある。術後6〜18時間が最多。</li>
+      <li><b>肩甲上神経・腋窩神経への術中刺激</b>：術後に外側・上方の放散痛が残ることがある。</li>
+      <li><b>装具による圧迫性神経障害</b>：持続するしびれ・灼熱感。NSAIDsに反応しにくい。即装具調整が必要。</li>
+    </ul>
+  </div>
+</div>
+
+<h3>神経ブロックの効果時間と消退管理</h3>
+<div class="mbox">
+  <b>ブロック消退のタイムライン（単回注入の場合）</b><br>
+  術後4〜6時間：効果ピーク（感覚・運動ほぼ消失）<br>
+  術後6〜12時間：感覚が戻り始め疼痛が出現し始める「消退開始期」<br>
+  術後12〜24時間：完全消退。リバウンド痛が最強になりやすい時間帯（深夜〜早朝に多い）。<br>
+  → <b>術後5〜6時間から定期鎮痛薬を開始し、消退前にカバーすることが重要。</b>
+</div>
+<div class="al al-d">リバウンド痛は事前に患者へ「麻酔が切れると急に痛くなることがある」と説明する。深夜〜早朝に発生することが多いため、当直帯に申し送りを確実に行い、PRN薬をすぐ使える状態にしておく。</div>
+
+<h3>疼痛評価：頻度と記録の原則</h3>
+<div class="nrs">
+  <div class="nc" style="background:#eaf3de;color:#3b6d11">0</div>
+  <div class="nc" style="background:#eaf3de;color:#3b6d11">1</div>
+  <div class="nc" style="background:#eaf3de;color:#3b6d11">2</div>
+  <div class="nc" style="background:#faeeda;color:#854f0b">3</div>
+  <div class="nc" style="background:#faeeda;color:#854f0b">4</div>
+  <div class="nc" style="background:#faeeda;color:#854f0b">5</div>
+  <div class="nc" style="background:#faeeda;color:#854f0b">6</div>
+  <div class="nc" style="background:#fcebeb;color:#a32d2d">7</div>
+  <div class="nc" style="background:#fcebeb;color:#a32d2d">8</div>
+  <div class="nc" style="background:#fcebeb;color:#a32d2d">9</div>
+  <div class="nc" style="background:#fcebeb;color:#a32d2d">10</div>
+</div>
+<div style="display:flex;gap:1rem;font-size:11.5px;margin-bottom:.7rem;flex-wrap:wrap">
+  <span style="color:#3b6d11">■ 0〜2：許容。経過観察。</span>
+  <span style="color:#854f0b">■ 3〜6：NRS4以上で積極介入。</span>
+  <span style="color:#a32d2d">■ 7〜10：即介入・原因精査。</span>
+</div>
+<div class="al al-i">安静時NRSと体動時NRSを<b>必ず分けて記録</b>する。安静NRS低値・体動NRS高値の場合は装具ズレ・姿勢不良が原因のことが多い。薬剤より先にポジショニング修正を行う。</div>
+
+<h3>多角的鎮痛（Multimodal Analgesia）</h3>
+<table class="tbl">
+  <thead><tr><th>薬剤・方法</th><th>機序のポイント</th><th>看護の注意点</th></tr></thead>
+  <tbody>
+    <tr><td><b>腕神経叢ブロック</b></td><td>電位依存性Naチャネル遮断 → 神経インパルス遮断。感覚＋運動の両方を遮断。</td><td>効果中は患肢を動かさないよう強調。SpO₂監視（横隔膜ブロックによる呼吸抑制リスク）。</td></tr>
+    <tr><td><b>NSAIDs</b><br>セレコキシブ・ロキソプロフェン等</td><td>COX阻害 → PGE₂産生抑制 → 炎症性疼痛の末梢・中枢感作を軽減。定期投与で予防的鎮痛。</td><td>術後48〜72時間は定期投与が重要。消化器症状（胃粘膜保護薬の併用確認）。腎機能低下・高齢者では慎重投与。</td></tr>
+    <tr><td><b>アセトアミノフェン</b><br>カロナール等</td><td>中枢性の痛み閾値を上昇。NSAIDsと機序が異なるため相乗効果が期待できる。</td><td>最大4g/日を超えない。肝機能障害時は減量。消化器への影響が少なくNSAIDs不耐時の代替にも。</td></tr>
+    <tr><td><b>オピオイド</b><br>トラマドール等</td><td>μ受容体への作動 → 脊髄後角での疼痛信号抑制。強力。</td><td>悪心・便秘・眠気・呼吸抑制（高齢者注意）。転倒リスク増加。緩下剤予防的使用を検討。</td></tr>
+    <tr><td><b>アイシング</b></td><td>局所血管収縮 → 炎症メディエーター減少。神経伝導速度低下 → 鎮痛・筋スパズム緩和。</td><td>1回15〜20分。タオル1枚介在（凍傷予防）。感覚麻痺中は禁止。</td></tr>
+    <tr><td><b>ポジショニング</b></td><td>ゼロポジション保持で修復部への機械的張力を最小化 → 機械受容性疼痛を直接軽減。</td><td>最も効果的な非薬物介入。ずれるたびに疼痛が増すため定時確認が必須。</td></tr>
+  </tbody>
+</table>
+
+<h3>先取り鎮痛（Preemptive Analgesia）の実践</h3>
+<div class="card">
+  <ul>
+    <li><span class="tk tk-b">ブロック消退前（術後5〜6時間）</span>：定期NSAIDs＋アセトアミノフェンの経口投与を開始する。「ブロックが切れる前に内服する」が原則。</li>
+    <li><span class="tk tk-b">リハビリ前30〜60分</span>：定期鎮痛薬orPRN薬を使用。PT担当者に「投与済み」を申し送る。</li>
+    <li><span class="tk tk-b">清拭・処置前</span>：装具を外す際・体位変換・創部処置前に鎮痛薬先行投与を検討。</li>
+    <li><span class="tk tk-b">就寝前</span>：夜間痛対策として就寝30〜60分前の定期内服を必ず確認する。「飲み忘れ」が夜間覚醒の直接原因になる。</li>
+  </ul>
+</div>
+
+<h3>夜間痛：なぜ夜は痛いのか</h3>
+<div class="mbox">
+  <b>①重力・姿勢的要因</b>：仰臥位で腕が体側に落ちると修復した棘上筋腱に引き伸ばし方向の張力が加わる。<br>
+  <b>②筋活動の消失</b>：覚醒時は棘上筋・三角筋が上腕骨を能動的に支持しているが、睡眠中は活動が消え修復部への受動的張力が増加する。<br>
+  <b>③概日リズムの影響</b>：副腎皮質ホルモン（コルチゾール）は深夜〜早朝に分泌が低下する。コルチゾールの抗炎症作用が落ちるため、この時間帯に炎症性疼痛が増強しやすい。<br>
+  <b>④臥床による浮腫</b>：長時間の臥床で静脈還流が低下し前腕〜手背に浮腫が生じ、これ自体が夜間の不快感・疼痛を悪化させる。
+</div>
+<div class="g2">
+  <div class="card">
+    <div class="card-title"><span class="bd bg">夜間痛対策の優先順位</span></div>
+    <ol style="padding-left:1.2rem;font-size:12.5px">
+      <li style="margin-bottom:4px">まずポジショニング修正（患肢が落ちていないか確認）</li>
+      <li style="margin-bottom:4px">就寝前の鎮痛薬内服確認（飲み忘れが最多原因）</li>
+      <li style="margin-bottom:4px">アイシング（就寝直前15〜20分）</li>
+      <li style="margin-bottom:4px">PRN薬の使用（NRS≥4で使用許可があるか確認）</li>
+      <li>翌朝までに改善なければ医師・PTへ相談・処方見直し</li>
+    </ol>
+  </div>
+  <div class="card">
+    <div class="card-title"><span class="bd2">夜間の緊急報告基準</span></div>
+    <ul>
+      <li>NRS≥8が30分以上続く</li>
+      <li>突然の疼痛増強（再断裂・血腫を疑う）</li>
+      <li>手指のしびれ・運動不全が急に悪化（装具圧迫神経障害）</li>
+      <li>発熱（38℃以上）＋創部腫脹増悪（感染）</li>
+      <li>SpO₂低下・呼吸困難（横隔膜麻痺・PEを疑う）</li>
+    </ul>
+  </div>
+</div>
+</div>
+
+<!-- ⑦ ポジショニング -->
+<div id="pos" class="sec">
+<h3>就寝時ポジショニングの基本原則</h3>
+<div class="al al-w">睡眠中のポジション不良が夜間痛と修復部ストレスの大きな原因となる。体位指導は入院中から始め退院後も継続が必要。申し送りでポジション状態を必ず伝達する。</div>
+
+<div class="pos-blk">
+  <div class="pos-hd"><span class="tk tk-g">第1推奨</span>半座位（セミファウラー位）30〜45°</div>
+  <div class="mbox" style="margin-bottom:.5rem">根拠：体幹を起こすと重力方向が変化し腕の下垂牽引が減少する。肩が後ろに落ちにくくなりゼロポジションが維持しやすい。夜間痛が強い患者・仰臥位では眠れない患者に特に有効。</div>
+  <div class="step"><div class="sn">1</div><p>ベッドを30〜45°ギャッジアップ（起き上がり45°より少し低め）。</p></div>
+  <div class="step"><div class="sn">2</div><p>患側腋窩〜肘下にバスタオルまたはポジショニングクッションを挿入。肘の高さが肩と同じ水準になるよう厚みを調整。</p></div>
+  <div class="step"><div class="sn">3</div><p>腰〜殿部の下にもクッションを入れ臀部が前方にずり落ちないようにする。</p></div>
+  <div class="step"><div class="sn">4</div><p>フットレストまたは足元に丸めたタオルを置き、下肢のずり落ちを防ぐ。</p></div>
+  <div class="step"><div class="sn">5</div><p><b>確認チェック</b>：患側の肩が健側より低くなっていないか。患側の肘が体幹より前にあるか。腕が腹部の上に「置かれている」感じになっているか。</p></div>
+</div>
+
+<div class="pos-blk">
+  <div class="pos-hd"><span class="tk tk-g">第2推奨</span>仰臥位（ギャッジアップ15〜30°）＋肘下クッション</div>
+  <div class="mbox" style="margin-bottom:.5rem">根拠：完全平臥位より腕の下垂牽引が少ない。クッションで腋窩〜肘を支持することで修復部への張力を最小化できる。</div>
+  <div class="step"><div class="sn">1</div><p>ベッドを15〜30°ギャッジアップ。完全平臥位にしない。</p></div>
+  <div class="step"><div class="sn">2</div><p>患側腋窩〜前腕にかけてバスタオル（三角形に折りたたんだもの）を挿入。肘が体幹と同じ高さ・やや前方に保たれるよう厚みを確保（巻きタオル2〜3枚分が目安）。</p></div>
+  <div class="step"><div class="sn">3</div><p>患側肩の下に薄いクッションを入れると肩が「沈み込まない」。特にマットが柔らかい場合に有効。</p></div>
+  <div class="step"><div class="sn">4</div><p><b>よくある失敗</b>：腋窩のクッションがずれて腕が腹部に落ちる。就寝前・深夜巡視に位置を確認する。</p></div>
+</div>
+
+<div class="pos-blk">
+  <div class="pos-hd"><span class="tk tk-g">第3推奨</span>健側を下にした側臥位（抱き枕使用）</div>
+  <div class="mbox" style="margin-bottom:.5rem">根拠：もともと横向きで寝る患者に馴染みやすい。患腕を前方に置くことで内転・後方内旋を自然に防げる。抱き枕の位置管理が鍵。</div>
+  <div class="step"><div class="sn">1</div><p>健側を下にして横向きになる。枕で頭部を安定させる。</p></div>
+  <div class="step"><div class="sn">2</div><p>患腕を抱き枕または折りたたんだ掛け布団の上に乗せる。位置は「体の正面より少し外方（斜め前方）」。真横では水平内転になるため不可。</p></div>
+  <div class="step"><div class="sn">3</div><p>背中側にもクッションを当て、患側への寝返りを防ぐ。</p></div>
+  <div class="step"><div class="sn">4</div><p><b>確認チェック</b>：患腕が体の前方〜斜め前方に保たれているか。抱き枕がずれていないか（特に夜間）。</p></div>
+</div>
+
+<div class="pos-blk" style="border-color:#e24b4a">
+  <div class="pos-hd"><span class="tk tk-r">禁忌</span>患側を下にした側臥位</div>
+  <ul>
+    <li>体重が修復部に直接加わり圧迫方向のストレスが生じる。</li>
+    <li>無意識の寝返りで患側を下にする患者が多い。家族への観察依頼・バックサポートクッションで防止する。</li>
+  </ul>
+</div>
+
+<div class="pos-blk" style="border-color:#e24b4a">
+  <div class="pos-hd"><span class="tk tk-r">禁忌</span>腕が体側に落ちた完全平臥位 ／ うつ伏せ</div>
+  <ul>
+    <li>完全平臥位で腕が重力で体側に落ちると：上腕骨が下方変位し修復部テンション最大化。夜間痛の最大原因。</li>
+    <li>うつ伏せ：肩峰が床面に押しつけられ、肩関節が強制内旋・後方内転される。絶対禁忌。</li>
+  </ul>
+</div>
+
+<h3>ポジショニングの記録・申し送り</h3>
+<table class="tbl">
+  <thead><tr><th>タイミング</th><th>確認内容</th><th>記録・申し送り方法</th></tr></thead>
+  <tbody>
+    <tr><td>就寝前（消灯巡視）</td><td>体位・クッション位置・装具の保持状態・NRS</td><td>「半座位保持・クッション腋窩良好・NRS2」など具体的に記録</td></tr>
+    <tr><td>深夜巡視（0〜2時）</td><td>体位のズレ・患肢の後方落下・呼吸状態</td><td>ずれがあれば修正して記録。患者を完全覚醒させず修正可能なことが多い。</td></tr>
+    <tr><td>早朝（6時前後）</td><td>夜間NRSの確認・体位の最終状態</td><td>「夜間NRS最大○・○時に修正あり」を朝の申し送りで伝達</td></tr>
+    <tr><td>リハビリ前・後</td><td>帰室後の体位再設定ができているか</td><td>PT/OTからの申し送りで体位指示を確認</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- ⑧ 神経・皮膚障害 -->
+<div id="nerve" class="sec">
+<h3>装具による神経障害</h3>
+<div class="al al-w">装具による神経障害は「締めすぎ」「腋窩パッドの位置不良」という防ぐことができる原因で生じることが多い。看護師の定期的な観察と早期対応が後遺症予防の鍵。</div>
+<div class="card">
+  <div class="nerve-row">
+    <div class="nerve-label">腋窩神経<br>（最多）</div>
+    <div class="nerve-body"><b>圧迫部位</b>：腋窩パッドが直接圧迫する部位と一致。アドバンで特に注意。<br><b>支配領域</b>：上腕外側〜三角筋部の感覚・三角筋の運動（腕の外転）。<br><b>症状</b>：上腕外側のしびれ・感覚低下。三角筋の筋力低下（腕が横に上がりにくい）。<br><b>見落としリスク</b>：ARCRそのものによる術後筋力低下と混同されやすい。装具除去後も三角筋筋力低下が持続する場合は腋窩神経障害を疑う。</div>
+  </div>
+  <div class="nerve-row">
+    <div class="nerve-label">橈骨神経</div>
+    <div class="nerve-body"><b>圧迫部位</b>：上腕外側〜後方。体幹ベルトが上腕部に食い込む場合。<br><b>支配領域</b>：手背橈側（親指〜中指背面側）の感覚・手関節・手指の伸展。<br><b>症状</b>：手背橈側のしびれ・感覚低下。重症では手関節の下垂（drop wrist）。<br><b>特徴</b>：上腕後面の圧迫は気づきにくい。ベルトが上腕にかかっていないか確認する。</div>
+  </div>
+  <div class="nerve-row">
+    <div class="nerve-label">尺骨神経</div>
+    <div class="nerve-body"><b>圧迫部位</b>：肘内側（尺骨神経溝）。スリングの縁が肘内側に当たることで生じる。<br><b>支配領域</b>：小指・薬指尺側の感覚・手内筋。<br><b>症状</b>：小指・薬指のしびれ・感覚低下。重症では鷲手（指が開けなくなる）。<br><b>特徴</b>：肘内側にパッドや薄いタオルを介在させると予防できる。</div>
+  </div>
+  <div class="nerve-row">
+    <div class="nerve-label">正中神経（まれ）</div>
+    <div class="nerve-body"><b>圧迫部位</b>：前腕腹側。スリングが前腕を締め付けすぎる場合。<br><b>症状</b>：親指〜薬指橈側のしびれ。親指の対立運動低下。<br><b>特徴</b>：スリング調整で改善することが多い。</div>
+  </div>
+</div>
+
+<h3>腕神経叢ブロック残存との鑑別</h3>
+<table class="tbl">
+  <thead><tr><th>鑑別ポイント</th><th>ブロック効果の残存</th><th>装具による圧迫神経障害</th></tr></thead>
+  <tbody>
+    <tr><td>発症タイミング</td><td>術直後〜24時間以内に発症し時間経過で改善する</td><td>装具装着後から徐々に悪化。装具調整後に改善・悪化。</td></tr>
+    <tr><td>経過</td><td>時間とともに回復する（6〜24時間で消退）</td><td>装具を外さない限り持続または悪化する</td></tr>
+    <tr><td>範囲</td><td>腕神経叢支配域全体に広い感覚鈍麻</td><td>特定の神経支配域に限局（小指だけ・手背だけ）</td></tr>
+    <tr><td>装具調整後の反応</td><td>装具調整で変化しない</td><td>装具をゆるめると症状が改善することが多い</td></tr>
+    <tr><td>対処</td><td>経過観察・消退を待つ</td><td>即装具調整・ゆるめる → 改善なければ医師へ報告</td></tr>
+  </tbody>
+</table>
+
+<h3>観察項目・頻度・神経障害発見時の対応</h3>
+<div class="g2">
+  <div class="card">
+    <div class="card-title"><span class="bd bi">観察項目と頻度</span></div>
+    <ul>
+      <li>感覚の左右差：綿棒や指で手背・手掌を触れ確認（POD0：1時間毎、POD1〜：4〜6時間毎）</li>
+      <li>手指の自動運動：「グーパーを繰り返して」</li>
+      <li>手関節の伸展：「手首を上に返して」（橈骨神経評価）</li>
+      <li>末梢循環：橈骨動脈触知・爪床CRT（2秒以内）・皮膚色・温度</li>
+      <li>しびれの部位・性状：「ジリジリ・ズキズキ・無感覚のどれか」を詳細に記録</li>
+    </ul>
+  </div>
+  <div class="card">
+    <div class="card-title"><span class="bd2">神経障害発見時の対応フロー</span></div>
+    <div class="step"><div class="sn sn-r">1</div><p>装具のベルト・パッドを確認。締め付けすぎ・位置ずれを目視・触診で確認。</p></div>
+    <div class="step"><div class="sn sn-r">2</div><p>ベルトを1〜2穴ゆるめ、腋窩パッドの位置を調整。5〜10分後に再評価。</p></div>
+    <div class="step"><div class="sn sn-r">3</div><p>改善が見られた場合：記録。観察頻度を上げる。装具士・PTへ情報共有。</p></div>
+    <div class="step"><div class="sn sn-r">4</div><p>改善がない・悪化する場合：即医師へ報告。</p></div>
+    <div class="step"><div class="sn sn-r">5</div><p>drop wrist・鷲手が出現：橈骨神経・尺骨神経の重篤な障害の可能性。即医師コール。</p></div>
+  </div>
+</div>
+<div class="al al-d">コンパートメント症候群との鑑別も念頭に置く。5P（Pain・Pallor・Pulselessness・Paresthesia・Paralysis）のうち複数が出現した場合は緊急。</div>
+
+<div class="divider"></div>
+<h3>皮膚トラブル</h3>
+<div class="mbox">6週間以上の終日装着という使用条件が皮膚トラブルを必然的に発生させやすい。①長期の機械的圧迫、②腋窩・ベルト下の高温多湿、③患側上肢を動かせずに皮膚のずれを自分で解消できない、の3点が重なる。夏季・肥満・発汗の多い患者・高齢者・糖尿病患者ではリスクが高まる。</div>
+<div class="skin-grid">
+  <div class="skin-card">
+    <div class="part">腋窩（最多）</div>
+    <ul>
+      <li><b>観察</b>：発赤・浸軟・びらん・白色化・悪臭</li>
+      <li><b>原因</b>：腋窩パッドによる閉鎖環境・蒸れ・摩擦</li>
+      <li><b>予防</b>：清拭後の完全乾燥・吸湿ガーゼ介在</li>
+      <li><b>対応</b>：発赤→乾燥→ワセリン or 亜鉛華軟膏。びらん→皮膚科相談。</li>
+    </ul>
+  </div>
+  <div class="skin-card">
+    <div class="part">上腕内側・肘内側</div>
+    <ul>
+      <li><b>観察</b>：擦過傷・線状発赤・水疱</li>
+      <li><b>原因</b>：スリングの縁・ベルトの摩擦</li>
+      <li><b>予防</b>：チューブサポーター・タオルを当てる</li>
+      <li><b>対応</b>：水疱は穿刺禁止。被覆材で保護。</li>
+    </ul>
+  </div>
+  <div class="skin-card">
+    <div class="part">体幹ベルト下</div>
+    <ul>
+      <li><b>観察</b>：線状の圧迫痕・発赤・摩擦水疱</li>
+      <li><b>原因</b>：体幹ベルトの密着・ずれによる摩擦</li>
+      <li><b>予防</b>：ベルト下にガーゼまたはシリコンパッド介在</li>
+      <li><b>対応</b>：ベルト位置の微調整。ガーゼを毎日交換。</li>
+    </ul>
+  </div>
+  <div class="skin-card">
+    <div class="part">肩峰・鎖骨部</div>
+    <ul>
+      <li><b>観察</b>：骨突出部の圧迫発赤・疼痛増強</li>
+      <li><b>原因</b>：フレーム・縁が骨突出部に当たる</li>
+      <li><b>予防</b>：クッションパッドの調整・装具士への連絡</li>
+      <li><b>対応</b>：ドーナツ型パッドで除圧。</li>
+    </ul>
+  </div>
+  <div class="skin-card">
+    <div class="part">頸部・後頸部</div>
+    <ul>
+      <li><b>観察</b>：ネックストラップによる圧迫痕・発赤</li>
+      <li><b>原因</b>：頸部ストラップが細い場合の集中圧迫</li>
+      <li><b>予防</b>：広幅のネックパッド使用。ストラップ下にガーゼ。</li>
+      <li><b>対応</b>：ストラップ長の調整。</li>
+    </ul>
+  </div>
+  <div class="skin-card">
+    <div class="part">前腕・手背</div>
+    <ul>
+      <li><b>観察</b>：浮腫・皮膚の光沢・緊張感</li>
+      <li><b>原因</b>：静脈還流低下による浮腫。スリングの縁の圧迫。</li>
+      <li><b>予防</b>：グーパー運動を毎日促す</li>
+      <li><b>対応</b>：浮腫が強い場合はPTに相談。</li>
+    </ul>
+  </div>
+</div>
+<div class="al al-w">高齢者・糖尿病・栄養状態不良の患者は皮膚の脆弱性が高く、軽微な摩擦でも急速にびらん化する。これらのハイリスク患者は観察頻度を上げ、早期から予防的にパッドや被覆材を使用する。外来受診時も必ず装具を外して皮膚確認を行う。</div>
+</div>
+
+<!-- ⑨ 患側手の使用範囲 -->
+<div id="hand" class="sec">
+<h3>なぜ病棟で規定を共有する必要があるか</h3>
+<div class="mbox">「患側の手で何をしていいか」は、担当医・担当看護師・PTによって言うことがバラバラになりやすいグレーゾーンである。「食事はダメ」「でも内服の袋は開けていい？」「スマホは？」「サインは？」——これらに対して病棟スタッフ全員が一貫した答えを出せなければ、患者は混乱し、最も緩い回答を採用する（＝使いすぎる）傾向がある。<b>主治医・病棟看護師・PT間で事前に「何を許可するか」のラインをカンファレンスで規定し、患者・家族に一貫して伝える体制が必須。</b></div>
+
+<h3>判断の2軸</h3>
+<div class="card">
+  <p style="margin-bottom:.5rem">患側の手の使用を判断するうえでの基準は<b>「肩関節を動かすかどうか」「修復部にテンションがかかるかどうか」</b>の2軸。</p>
+  <ul>
+    <li><span style="font-weight:700;color:#3b6d11">許可しやすい動作</span>：手・手首・肘だけを使い、肩をまったく動かさない動作。体幹・装具が固定された状態で指先だけを使う動作。</li>
+    <li><span style="font-weight:700;color:#a32d2d">禁止すべき動作</span>：肩関節が屈曲・外転・回旋する動作。患肢で体を支える動作。腕全体の重量をかける動作（テーブルに手をつく等）。</li>
+    <li>判断が難しいのは「手・肘だけのように見えて肩が知らず動く動作」（食事・文字を書く・ドアを開けるなど）。これらは肩の代償運動が入るため原則禁止。</li>
+  </ul>
+</div>
+
+<h3>装具別・病期別の患側手使用範囲（目安）</h3>
+<div class="al al-d">以下はあくまでも目安。<b>最終判断は主治医指示に従い、病棟全体で統一した説明を行う。</b>「○○先生はいいと言った」「○○さんはダメと言った」という食い違いが生じた場合は主治医に確認し、指示を統一して記録に残す。</div>
+<table class="tbl">
+  <thead>
+    <tr><th style="min-width:100px">時期・装具</th><th>禁止（原則）</th><th>医師確認のうえ許可を検討</th><th>基本的に許可</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>装具固定中（全期）</b><br><span style="font-size:11px;color:#666">ウルトラ・アドバン共通</span></td>
+      <td class="rule-ng"><ul>
+        <li>箸・スプーンを使った食事</li>
+        <li>コップ・ペットボトルを持って飲む</li>
+        <li>文字を書く（ノート・紙への筆記）</li>
+        <li>ドア・引き出しを引く/押す</li>
+        <li>物を持ち上げる・運ぶ</li>
+        <li>手や肘をついて起き上がる</li>
+      </ul></td>
+      <td class="rule-q"><ul>
+        <li>内服袋を指先でつまんで開ける（机上で行う場合）</li>
+        <li>スマホ画面タップ（端末をテーブルに置いた状態）</li>
+        <li>タオルを膝の上に置いた状態で顔を拭く（肩を動かさない範囲）</li>
+      </ul></td>
+      <td class="rule-ok"><ul>
+        <li>手指のグーパー運動（積極的に促す）</li>
+        <li>手首の軽い屈伸・回内外</li>
+        <li>患肢を装具上・膝上に静置した状態での指先の軽い接触</li>
+      </ul></td>
+    </tr>
+    <tr>
+      <td><b>アドバン：<br>肘フリー化後</b><br><span style="font-size:11px;color:#666">肩は引き続き固定中</span></td>
+      <td class="rule-ng"><ul>
+        <li>上記の禁止事項はすべて継続</li>
+        <li>腕全体を使った動作（持ち上げ・運搬）</li>
+        <li>「肘が動く＝腕が使える」は誤解。必ず再指導する。</li>
+      </ul></td>
+      <td class="rule-q"><ul>
+        <li>肘を曲げた状態でのテーブル上の軽い作業（スマホ操作・内服袋開封など）</li>
+        <li>PTの指示する肘の自動屈伸運動</li>
+      </ul></td>
+      <td class="rule-ok"><ul>
+        <li>手指運動の継続</li>
+        <li>肘屈伸（PT指示範囲内）</li>
+      </ul></td>
+    </tr>
+    <tr>
+      <td><b>装具除去直後〜術後3ヶ月</b></td>
+      <td class="rule-ng"><ul>
+        <li>食事（箸・スプーン）：引き続き禁止</li>
+        <li>500g以上の持ち上げ</li>
+        <li>高い位置への持ち上げ（500g以下でも）</li>
+        <li>禁忌動作5項目（水平内転・後方内旋等）</li>
+      </ul></td>
+      <td class="rule-q"><ul>
+        <li>500g以下の物を平面上でスライドさせる</li>
+        <li>デスクワーク（PC・スマホ・書類）：PT確認のうえ</li>
+        <li>洗顔・歯磨き（肩の挙上を最小限に）</li>
+      </ul></td>
+      <td class="rule-ok"><ul>
+        <li>PT指示範囲内の自動運動</li>
+      </ul></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>よくある質問と回答例</h3>
+<div class="g2">
+  <div class="card">
+    <div class="card-title"><span class="bd bw">Q：食事はダメなのに内服袋は開けていいの？</span></div>
+    <p>食事（箸・スプーン）は<b>肘〜肩全体を動かす動作</b>が伴う。内服袋を机の上に置いて指先だけで開封するのは<b>肩をほぼ動かさない</b>。この違いが判断の根拠。「机上に置いた状態で行う」が必須条件。袋を持ち上げて破く動作は禁止。主治医確認のうえ許可する。</p>
+  </div>
+  <div class="card">
+    <div class="card-title"><span class="bd bw">Q：アドバンで肘が動くようになったら使えるの？</span></div>
+    <p>肘フリー化は「肘の廃用・拘縮予防のため」。<b>肩の修復部が治癒したことを意味しない。</b>肩は引き続き外転位固定中であり、腕全体を使った動作の禁止は変わらない。「肘が動く＝腕が使える」という誤解を防ぐため、フリー化当日に必ず再指導する。</p>
+  </div>
+  <div class="card">
+    <div class="card-title"><span class="bd bw">Q：スマホはいつからOK？</span></div>
+    <p><b>テーブルや膝の上に置いた状態</b>で指先でタップする分には肩を動かさないため許可を検討しやすい。スマホを<b>持ち上げて顔の前に掲げる</b>動作は肘〜肩を使うため禁止。「置いた状態でのみ使用可」を条件に主治医確認のうえ許可する。</p>
+  </div>
+  <div class="card">
+    <div class="card-title"><span class="bd bw">Q：書類にサインしたい</span></div>
+    <p>紙を机に置いた状態でのサイン程度は肩をほぼ動かさないため許可を検討しやすい。長文を書く・紙を手で押さえる・力を入れる動作は肩の代償運動が入りやすいため原則禁止。主治医確認のうえ「サインのみ可」など条件を決める。</p>
+  </div>
+</div>
+
+<h3>病棟でのルール共有の実践</h3>
+<div class="card">
+  <ul>
+    <li><b>術後カンファレンス（術後1〜3日以内）</b>に主治医・担当看護師・PTで「患側手の許可範囲」を確認し、指示書またはケアサマリーに明記する。</li>
+    <li>許可範囲をA4半ページ程度の<b>「患者向け一覧表」</b>にまとめ、ベッドサイドに掲示する。「○○はOK・△△はNG」を視覚的に確認できるようにする。</li>
+    <li>断裂サイズ・装具の種類・フリー化状況が変わるたびに内容を更新し、全スタッフへ申し送りで共有する。</li>
+    <li>患者・家族から「○○先生はいいと言った」という発言があった場合は、善意に受け取りつつも主治医へ照会し、統一した回答を記録に残す。</li>
+  </ul>
+</div>
+</div>
+
+<!-- ⑩ 入院中の看護 -->
+<div id="ward" class="sec">
+<div class="g2">
+  <div class="card">
+    <div class="card-title"><span class="bd bw">出血・ドレーン管理</span></div>
+    <ul>
+      <li>排液量・性状を記録（鮮血 → 淡血 → 漿液性の推移確認）</li>
+      <li>術後24〜48時間以内の鮮血急増は即報告</li>
+      <li>ドレーン屈曲・抜去・接続外れを定期確認</li>
+      <li>術後Hb値確認（失血量評価、医師指示による）</li>
+    </ul>
+  </div>
+  <div class="card">
+    <div class="card-title"><span class="bd bw">感覚障害・しびれ</span></div>
+    <ul>
+      <li>ブロック消退（6〜24時間）と装具圧迫（持続・悪化）を鑑別</li>
+      <li>手指触覚・痛覚を健側と比較。手指自動運動の可否を確認。</li>
+      <li>消退後も残存 → 装具をゆるめ改善なければ医師へ報告</li>
+      <li>評価結果・時刻を詳細に記録に残す</li>
+    </ul>
+  </div>
+  <div class="card">
+    <div class="card-title"><span class="bd bn">ADL・更衣</span></div>
+    <ul>
+      <li><b>着るとき：患側から。脱ぐとき：健側から（脱健着患の逆）</b></li>
+      <li>Tシャツ：患側の袖→頭→健側の袖の順</li>
+      <li>前開きの服が退院後の日常で最も楽と指導する</li>
+      <li>食事・洗面：非患側のみで操作</li>
+    </ul>
+  </div>
+  <div class="card">
+    <div class="card-title"><span class="bd2">転倒予防</span></div>
+    <ul>
+      <li>装具重量（特にアドバン）で重心が患側・前方にずれる</li>
+      <li>転倒時に患肢を反射的に使う可能性が高い → 即再断裂のリスク</li>
+      <li>移動時は必ず健側で手すりを持つよう習慣化させる</li>
+      <li>夜間：ナースコール位置の確認・足元灯の確保</li>
+    </ul>
+  </div>
+  <div class="card">
+    <div class="card-title"><span class="bd bg">感染予防</span></div>
+    <ul>
+      <li>術後3〜5日で発熱再燃・創部発赤増大 → 感染疑い</li>
+      <li>創部：発赤・腫脹・硬結・疼痛の進行・膿性滲出 → 即報告</li>
+      <li>抗菌薬の確実な投与・効果確認</li>
+      <li>患者・家族に創部を触らせない指導</li>
+    </ul>
+  </div>
+  <div class="card">
+    <div class="card-title"><span class="bd bi">廃用予防</span></div>
+    <ul>
+      <li>固定中でも可能な運動を毎日促す：手指グーパー・手首回し・肘屈伸・肩甲骨運動・上体捻り</li>
+      <li>体幹・下肢の廃用予防：歩行・下肢運動を積極的に行う</li>
+      <li>姿勢管理：猫背・前方頭位は肩甲骨位置を乱しリハビリ効果を低下させる</li>
+    </ul>
+  </div>
+</div>
+
+<h3>精神的苦痛へのサポート</h3>
+<table class="tbl">
+  <thead><tr><th>苦痛のパターン</th><th>患者の言葉の例</th><th>看護師の対応</th></tr></thead>
+  <tbody>
+    <tr><td><b>再断裂への恐怖・過剰安静</b></td><td>「息するのも怖い」「少し動いただけで切れちゃうんじゃないか」</td><td>「装具がしっかり守ってくれています。装具を正しく着けていれば普通に過ごしているだけで縫合部が切れることはありません」と具体的に説明。</td></tr>
+    <tr><td><b>楽観視・過信</b></td><td>「もう痛くないから大丈夫でしょ」</td><td>「痛くなくなっても腱板の修復はまだ途中です。6週間は生物学的に必要な時間です」と根拠を示す。感情的に脅すのではなく理由を伝える。</td></tr>
+    <tr><td><b>長期固定による焦り</b></td><td>「6週間も動かせないなんて無理」「家族に迷惑をかけている」</td><td>禁止事項の列挙だけでなく「できること」を積極的に伝える。自主訓練を「自分で回復に貢献できること」として提示する。小さな進歩を言語化して伝える。</td></tr>
+    <tr><td><b>夜間痛・睡眠障害による消耗</b></td><td>「毎晩眠れなくて限界です」</td><td>「つらいですね」で終わらず、ポジショニング・鎮痛薬・アイシングで積極的に対処する。改善しない場合は医師へ睡眠薬の検討を依頼する。</td></tr>
+    <tr><td><b>ADL障害による自尊心の傷つき</b></td><td>「着替えも食事も自分でできない。情けない」</td><td>特に自立心の高い高齢者・男性に多い。「これだけできるようになった」という進歩を具体的に言語化して伝える。</td></tr>
+    <tr><td><b>先の見通しへの不安</b></td><td>「本当に元に戻るの？」</td><td>「多くの方は4〜6ヶ月で日常生活が概ね戻ります」と目安を伝える。「今この週はこういう状態で正常」と現在地を定期的に教える。</td></tr>
+  </tbody>
+</table>
+<div class="al al-w">食欲の著明な低下・会話量の急減・「もうどうでもいい」という発言・リハビリへの強い拒否が続く場合は主治医・心療内科・精神科看護師への連携を検討する。うつ状態・適応障害を見逃さない。</div>
+<div class="al al-i">認知症・高齢者：禁忌動作の理解が維持できない場合がある。「怒る」のではなく毎回同じ言葉・方法で短く説明し直す。理解が困難な場合は主治医・家族・PT・OTを交えてカンファレンスを開催し、環境設定（センサー・ベッド柵）で補完する。</div>
+</div>
+
+<!-- ⑪ 禁忌動作 -->
+<div id="danger" class="sec">
+<h3 class="red">術後3ヶ月まで禁止する5大禁忌動作</h3>
+<div class="al al-d">修復した腱板はリモデリング期の3ヶ月まで「再断裂リスクが最も高い状態」が続く。装具が外れても日常生活での制限は継続する。書面で渡し、患者・家族が口頭で言える状態で退院させる。</div>
+<table class="tbl">
+  <thead><tr><th>禁忌動作</th><th>力学的理由</th><th>日常での具体例</th></tr></thead>
+  <tbody>
+    <tr><td><b style="color:#a32d2d">① 水平内転</b><br>（患手を反対の肩へ）</td><td>棘上筋・棘下筋修復部に最大引き伸ばしストレスが加わる</td><td>シートベルト装着・洗顔・健側肩を触る動作</td></tr>
+    <tr><td><b style="color:#a32d2d">② 後方内旋</b><br>（手を背中に回す）</td><td>棘上筋下部・肩甲下筋への強い張力</td><td>後ろポケットへの手入れ・背中を洗う・帯を結ぶ</td></tr>
+    <tr><td><b style="color:#a32d2d">③ 高位での持ち上げ</b></td><td>外転＋荷重で修復部テンション最大化</td><td>棚の上を取る・洗濯物干し</td></tr>
+    <tr><td><b style="color:#a32d2d">④ 手・肘をついて起き上がる</b></td><td>患肢支持で瞬間的に大きな荷重が加わる</td><td>肘をついた起き上がり動作・ベッドに手をついて立ち上がる</td></tr>
+    <tr><td><b style="color:#a32d2d">⑤ 患側を下にして寝る</b></td><td>体重圧迫＋修復部への牽引ストレス</td><td>就寝中の無意識な寝返り（家族への観察依頼が必要）</td></tr>
+  </tbody>
+</table>
+
+<h3>荷重制限の目安</h3>
+<table class="tbl">
+  <thead><tr><th>時期</th><th>持てる重さ</th><th>補足</th></tr></thead>
+  <tbody>
+    <tr><td>装具固定中</td><td>基本的に患側では持たない</td><td>手指・手関節の軽作業のみ（医師指示のうえ）</td></tr>
+    <tr><td>術後〜3ヶ月</td><td>500g以下（ペットボトル1本）</td><td>高い位置への持ち上げは500g以下でも禁止</td></tr>
+    <tr><td>術後3〜6ヶ月</td><td>1〜2kgまで（医師指示）</td><td>素早い動作・衝撃動作は禁止</td></tr>
+    <tr><td>術後6ヶ月〜</td><td>段階的に拡大（医師・PT判断）</td><td>重労働・スポーツ（投球・水泳等）は個人差が大きい</td></tr>
+  </tbody>
+</table>
+
+<h3>入浴・清潔ケア（施設プロトコル）</h3>
+
+<div class="al al-d">
+  <b>施設によっては以下の一般的な方法を禁止している場合がある。</b><br>
+  ✕ ペットボトルを腋窩に挟む方法（外転角度が不安定でゼロポジションを保証できない。腋窩への圧迫が修復部テンションを不規則に変動させる。）<br>
+  ✕ 三角巾を使用したまま入浴する方法（三角巾は外転約0〜30°程度しか保てず、修復部への下垂牽引ストレスが生じる。濡れると機能が著しく低下する。）
+</div>
+
+<h4 style="margin-top:.9rem;font-size:13px;font-weight:700;color:#1a1a1a;padding-left:9px;border-left:3px solid #378add">施設独自プロトコル（例）：フレームタワー型台を使用した入浴</h4>
+
+<div class="mbox">
+  一部施設では医師が独自に考案した<b>フレームタワー型の台</b>を使用する。浴室・シャワー室内に設置した台の上に患側の手（前腕・手首付近）を乗せることで、ゼロポジション（外転60〜70°・屈曲20〜30°）に近い肢位を入浴中も安定的に保持できる。装具を外した状態で体を洗う際の唯一の許可された方法であり、これ以外の代替方法は使用しない。
+</div>
+
+<div class="g2">
+  <div class="card">
+    <div class="card-title"><span class="bd bi">台の使い方・体位のポイント</span></div>
+    <ul>
+      <li><b>手の置き方</b>：患側の手（手首〜前腕）を台の上にそっと乗せる。腕の重みを台に預けるイメージで<b>力を入れない</b>こと。</li>
+      <li><b>体位の確認</b>：台に手を置いた状態で肩の高さが左右揃い、肘が肩より前方に位置しているかを確認する（＝ゼロポジションの範疇）。</li>
+      <li><b>肩の力を抜く</b>：台に手を置いた状態でも肩周囲筋に力が入っている場合はゼロポジションが崩れているサイン。「ストンと力を抜いて」と声かけする。</li>
+      <li><b>前傾しない</b>：体を前に傾けると患肢が後方に引かれゼロポジションが崩れる。背筋を伸ばした直立位を保つ。</li>
+    </ul>
+  </div>
+  <div class="card">
+    <div class="card-title"><span class="bd2">入浴中の禁止事項</span></div>
+    <ul>
+      <li><b>患側の手・腕で台を押す・踏ん張る</b>：台はあくまでも「乗せる」だけ。力をかけると修復部に瞬間的な荷重が加わる。</li>
+      <li><b>洗髪（シャンプー）</b>：両手を頭部に上げる動作は高位での外転＋負荷となり禁忌。入院中・装具固定中は一切行わない。</li>
+      <li><b>危険肢位（禁忌動作5項目）</b>：水平内転・後方内旋・高位への手上げは入浴中も同様に禁止。</li>
+      <li><b>患側の腕を使って身体を支える</b>：滑って転倒しそうになった際に患側で咄嗟に支えようとする動作が最も危険。</li>
+      <li><b>浴槽への出入り（装具固定中）</b>：浴槽をまたぐ動作は体幹のバランスが崩れやすく転倒リスクが高い。装具固定中は浴槽への入浴は禁止し、シャワーのみとする。</li>
+    </ul>
+  </div>
+</div>
+
+<div class="card" style="margin-top:.6rem">
+  <div class="card-title"><span class="bd bw">スタッフが行うこと（介助の範囲）</span></div>
+  <ul>
+    <li><b>背中を洗う</b>：患者は前を向いたまま直立位を保ち、スタッフが背中全体を洗う。患者が振り向いたり体を捻ったりしないよう指示する。</li>
+    <li><b>健側の腕を洗う</b>：健側の腕は本来自分で洗えるが、健側の手で患肢を支えている場合はスタッフが洗う。</li>
+    <li><b>洗髪（シャンプー）</b>：患者は洗髪不可のため、入院中は全てスタッフが担当する。体位は前傾せずに座位または立位のまま。</li>
+    <li><b>患側腋窩・肘内側・装具接触部</b>：蒸れやすい部位を重点的に洗浄し、水分をよく拭き取る。これらの部位はスタッフが確認しながら行う。</li>
+    <li><b>体を拭く</b>：患側の腕・肩周囲はスタッフが拭く。健側・体幹は患者が行えるが、動作中の姿勢を確認する。</li>
+  </ul>
+</div>
+
+<div class="divider"></div>
+
+<h4 style="font-size:13px;font-weight:700;color:#1a1a1a;padding-left:9px;border-left:3px solid #639922">退院前：自宅の入浴環境の情報収集と指導</h4>
+
+<div class="al al-i">退院が近づいてきたら、患者の自宅の浴室環境を確認し、自宅での入浴方法を具体的に指導する。「シャワーのみで過ごせるか」「浴槽を使うのか」を確認し、それに応じた指導を行う。</div>
+
+<div class="card">
+  <div class="card-title"><span class="bd bi">確認すべき自宅環境の情報</span></div>
+  <table class="tbl">
+    <thead><tr><th>確認項目</th><th>なぜ重要か</th><th>確認内容</th></tr></thead>
+    <tbody>
+      <tr><td>浴槽の有無・高さ</td><td>浴槽への出入り動作の可否を判断するため</td><td>浴槽の縁の高さ・またぎやすさ。手すりの有無。浴槽内での姿勢保持が可能か。</td></tr>
+      <tr><td>シャワーのみの環境か</td><td>シャワーのみなら浴槽動作の指導が不要</td><td>シャワールームの広さ・椅子の有無・転倒リスク。</td></tr>
+      <tr><td>浴室内の手すり</td><td>転倒予防の観点から確認が必要</td><td>健側で使える手すりがあるか。滑り止めマットの有無。</td></tr>
+      <tr><td>介助者の有無</td><td>洗髪・背中洗いの介助が受けられるか</td><td>同居家族・介護者がいるか。介助に慣れているか。</td></tr>
+      <tr><td>フレームタワー台の自宅持ち出し</td><td>院内で使用した台が自宅で使えるか</td><td>貸出・購入の可否を確認。代替手段の検討。</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="card">
+  <div class="card-title"><span class="bd bw">浴槽を使用する場合の指導（装具除去後・医師許可後）</span></div>
+  <div class="mbox" style="margin-bottom:.5rem">
+    浴槽への入浴は<b>装具除去後かつ医師の許可が下りてから</b>。装具固定中は浴槽入浴は禁止（出入り時に体幹バランスが崩れ転倒・患肢支持のリスク）。
+  </div>
+  <ul>
+    <li><b>浴槽の縁を「フレームタワーの代わり」として使う</b>：浴槽に入る前・浴槽の縁に座っている状態で、患側の手（手首〜前腕）を浴槽の縁の上にそっと乗せる。ゼロポジション（外転60〜70°・屈曲20〜30°）が保たれる位置に縁の高さが合うか事前に確認する。</li>
+    <li><b>縁の高さと手の位置の確認方法</b>：「腋窩が自然に開いていて、肘が肩より少し前に出ている状態で手が縁に届くか」を確認する。縁が低すぎる場合はタオルや台で高さを補う。縁が高すぎる場合は患側に余計な外転ストレスがかかるため注意する。</li>
+    <li><b>浴槽出入りの手順</b>：①浴槽の縁に健側から座る → ②健側の足から先にまたいで入る → ③浴槽内では患側の手を縁または浴槽内の安定した場所に乗せて体幹を安定させる。出るときは逆の順番で行う。</li>
+    <li><b>転倒防止</b>：浴槽出入りは最も転倒しやすい場面。健側の手で手すりを必ず使用。浴槽の床の滑り止めを確認する。介護者が見守れる環境を整える。</li>
+    <li><b>洗髪・背中洗いは引き続き介助が必要</b>：浴槽入浴が許可されても、洗髪と背中洗いの自立は禁止。家族の協力が得られない場合は訪問入浴・訪問看護の利用を検討する。</li>
+  </ul>
+</div>
+
+<div class="al al-d">浴室は転倒リスクが最も高い場所のひとつ。転倒時の反射的な患肢支持が再断裂に直結する。「転ばないこと」を最優先とし、自信が持てない場合はシャワーのみで代替するよう指導する。</div>
+</div>
+
+<!-- ⑫ 退院指導 -->
+<div id="dc" class="sec">
+<h3>退院指導チェックリスト</h3>
+<table class="tbl">
+  <thead><tr><th>項目</th><th>確認内容</th><th>確認</th></tr></thead>
+  <tbody>
+    <tr><td>装具の着脱</td><td>患者・家族が自力で装着・除去できる。外してよい場面を理解している。</td><td>□</td></tr>
+    <tr><td>就寝時ポジション</td><td>半座位または健側側臥位の実技確認。肘下クッションの設置方法を実践できる。患側を下にしない。</td><td>□</td></tr>
+    <tr><td>5大禁忌動作</td><td>5項目を書面で渡す。口頭で言えるか確認する。</td><td>□</td></tr>
+    <tr><td>患側手の使用範囲</td><td>許可範囲の一覧表を渡す。「肘フリー化後も肩は固定中」の理解確認（アドバン症例）。</td><td>□</td></tr>
+    <tr><td>疼痛管理</td><td>内服薬の用法説明。NRS4以上でのPRN使用方法。就寝前内服の確認習慣。</td><td>□</td></tr>
+    <tr><td>皮膚管理</td><td>装具下の発赤・擦傷の対処法。悪化時の連絡先。鏡での確認方法。</td><td>□</td></tr>
+    <tr><td>緊急受診の目安</td><td>4症状を書面で渡す（再断裂・感染・神経障害・急激な疼痛増強）。</td><td>□</td></tr>
+    <tr><td>外来リハビリ</td><td>次回PT予約・外来受診日の確認。自己判断での中断禁止を説明。</td><td>□</td></tr>
+    <tr><td>装具の費用還付</td><td>療養費払いの申請書類（医証・領収書等）の確認。</td><td>□</td></tr>
+    <tr><td>日常生活の制限</td><td>運転・家事・就労の制限時期を確認。</td><td>□</td></tr>
+    <tr><td>入浴方法</td><td>フレームタワー台の使い方の実技確認（院内で練習済みか）。自宅の浴槽環境を確認し、浴槽の縁へのゼロポジション保持の指導。洗髪・背中洗いは家族介助or訪問看護で対応できるか確認。</td><td>□</td></tr>
+    <tr><td>自主訓練</td><td>ペンギン体操・肩甲骨運動・グーパー運動の方法・回数を実技で確認。</td><td>□</td></tr>
+  </tbody>
+</table>
+
+<h3>緊急受診の目安（書面で渡す）</h3>
+<div class="al al-d">
+  以下が出現した場合は速やかに外来受診・連絡すること。<br>
+  <b>① 回復していた腕の挙上が突然できなくなった</b>（再断裂の疑い）<br>
+  <b>② 疼痛が急激に増強し動けなくなった</b><br>
+  <b>③ 創部に膿・強い発赤・38℃以上の発熱</b>（感染の疑い）<br>
+  <b>④ 手指のしびれ・脱力が急に悪化した</b>（神経障害の疑い）
+</div>
+
+<h3>復職・スポーツ復帰の目安</h3>
+<table class="tbl">
+  <thead><tr><th>活動内容</th><th>目安時期</th><th>補足</th></tr></thead>
+  <tbody>
+    <tr><td>軽い日常動作（洗顔・洗髪・食事）</td><td>装具除去後〜術後2ヶ月</td><td>禁忌動作5項目は3ヶ月まで継続</td></tr>
+    <tr><td>デスクワーク・軽作業</td><td>術後2〜3ヶ月（医師許可）</td><td>重い物・頭上への持ち上げは不可</td></tr>
+    <tr><td>運転</td><td>装具除去後〜医師許可後（概ね術後6週〜）</td><td>緊急回避操作が可能であることが条件</td></tr>
+    <tr><td>重労働・肩を使う作業</td><td>術後6ヶ月〜（個人差あり）</td><td>段階的に負荷を増やす</td></tr>
+    <tr><td>スポーツ（投球・水泳等）</td><td>術後6〜12ヶ月（競技レベルによる）</td><td>MRI確認後に主治医・PTが判断</td></tr>
+  </tbody>
+</table>
+</div>
+
+</div><!-- end .wrap -->
+
+<script>
+document.querySelectorAll('.tab').forEach(function(t){
+  t.addEventListener('click',function(){
+    document.querySelectorAll('.tab').forEach(function(x){x.classList.remove('on')});
+    document.querySelectorAll('.sec').forEach(function(x){x.classList.remove('on')});
+    t.classList.add('on');
+    document.getElementById(t.getAttribute('data-t')).classList.add('on');
+  });
+});
+</script>
+</body>
+</html>
